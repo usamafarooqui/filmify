@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Mochiy+Pop+One&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(38, 37, 37);
+   /* overflow: hidden; */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app::-webkit-scrollbar {
+    display: none;
   }
+  
+
+.app{
+    text-align: center;
+    margin: 30px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app h1{
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 80px;
+    color: white;
+    
+ 
+    
 }
 
-.App-link {
-  color: #61dafb;
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* searchbar heading */
+
+
+.search{
+    margin: 50px;
+}
+
+.searchfield{
+    width: 990px;
+    height: 60px;
+    border-radius: 35px;
+    padding-left: 35px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(40, 38, 38);
+}
+
+.searchbar{
+    position: relative;
+    right: 53px;
+    top: 10px;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+
+
+/* movie card css */
+
+.title-block{
+    /* background-color: red; */
+    position: relative;
+    top: -62px;
+  
+}
+
+
+.title{
+    color: white;
+    font-size: 20px;
+}
+
+.movie-type{
+    color: white;
+}
+
+.year{
+    color: white;
+}
+
+.moviecards > img{
+    border-radius: 20px;
+}
+
+
+@media screen and (max-width:1024px) {
+    .searchfield{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .searchfield{
+        width: 214px;
+    }
+    .empty > h1{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .searchfield{
+        width: 90%;
+    }
+    .searchbar{
+        position: absolute;
+        top: 187px;
+        right: 58px;
+    }
+    
 }
